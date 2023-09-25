@@ -1,11 +1,11 @@
-import Image from 'next/image'
+
+import MyComp from './StudentInfo'
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello world</h1>
-
-
+      <h1>CPRG 306: Web Development - Assignments</h1>
+      <MyComp/>
 
     </main>
   )
