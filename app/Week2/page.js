@@ -1,3 +1,4 @@
+
 import MyComp from "../StudentInfo";
 
 
@@ -12,3 +13,4 @@ export default function week2(){
                         );
 
 }
+

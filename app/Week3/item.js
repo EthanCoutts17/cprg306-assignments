@@ -1,4 +1,8 @@
 
+
+
+
+
 export default function Item({name,quantity,category}){
                         return(
                         <div className="border font-bold border-sky-500 bg-sky-800 text-white w-full max-w-xs m-4 p-2">                      
@@ -10,3 +14,4 @@ export default function Item({name,quantity,category}){
                         </div>
                         );
 }
+
