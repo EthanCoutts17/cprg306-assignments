@@ -8,10 +8,10 @@ export default function Home() {
       <MyComp/>
 
       <li>
-      <Link href = "Week2">Week 2 </Link>
+      <Link href = "week2">week 2 </Link>
       </li>
       <li>
-      <Link href = "Week3">Week 3 </Link>
+      <Link href = "week3">week 3 </Link>
       </li>
       <li>
       <Link href = "week4">week 4 </Link> 
