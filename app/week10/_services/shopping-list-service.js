@@ -1,0 +1,39 @@
+import { db } from "../_utils/firebase";
+import { collection, getDocs, addDoc, query } from "firebase/firestore";
+
+
+export async function dbAddItem(userId, itemObj){
+                        try {
+                             let collectionReference = collection(db, "users", userId, "items")
+                             const addedItemPromise = await addDoc(collectionReference,itemObj);
+                             console.log(addedItemPromise.id);
+                                                
+                        } catch (error) {
+                                                console.error(error);
+                                                
+                        }
+
+
+}
+
+export async function dbGetItems(userId, updateItemList){
+                        try {
+                                 let collectionReference = collection(db, "users", userId, "items" );    
+                                 const getItemPromise = await getDocs(collectionReference);
+                                 let datalist = [];
+                                 
+                                 getItemPromise.forEach((doc)=>{
+                                                //console.log(doc.id, "  - ", doc.data())
+                                                let thisItem = {
+                                                                        id: doc.id,
+                                                                        ...doc.data()
+                                                }
+                                                datalist.push(thisItem);
+                                 });
+                                 updateItemList(datalist);
+                                 
+                        } catch (error) {
+                                                console.error(error)
+                                                
+                        }
+}
